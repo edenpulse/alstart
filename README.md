@@ -13,7 +13,7 @@ Choucroute, knacks, et picon bière
 ## How to start :
 - git clone this repo
 - cd to cloned folder
-- run `npm install`
+- run `npm install` or `npm update`
 - run `bower update`
 - run `grunt` / `grunt watch`
 

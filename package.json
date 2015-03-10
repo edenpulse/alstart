@@ -1,6 +1,6 @@
 {
   "name": "alstart",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "devDependencies": {
     "grunt": "latest",
     "gulp": "latest",
@@ -8,12 +8,16 @@
     "gulp-minify-css": "latest",
     "gulp-sourcemaps": "latest",
     "gulp-rename": "latest",
+    "gulp-less": "latest",
+    "gulp-concat": "latest",
+    "gulp-uglify": "latest",
     "grunt-cli": "latest",
     "grunt-sass": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-contrib-cssmin": "latest",
     "grunt-contrib-less": "latest",
     "grunt-contrib-concat": "latest",
-    "grunt-contrib-uglify": "latest"
+    "grunt-contrib-uglify": "latest",
+    "browser-sync": "latest"
   }
 }
