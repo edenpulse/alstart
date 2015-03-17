@@ -9,20 +9,20 @@ module.exports = function (grunt) {
         },
         dist: {
             files: {
-                './assets/css/style.css': './assets/css/style.scss'
+                './assets/css/styles.css': './assets/css/styles.scss'
             }
           }
         },
         less: {
           files: {
-            './assets/css/style.css': './assets/css/style.less'
+            './assets/css/styles.css': './assets/css/styles.less'
             }
           },
         cssmin: {
             minify: {
                 expand: true,
                 cwd: './assets/css/',
-                src: ['style.css'],
+                src: ['styles.css'],
                 dest: './assets/css/',
                 ext: '.min.css'
             }
@@ -40,7 +40,7 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            files: ['./assets/css/style.scss'],
+            files: ['./assets/css/styles.scss'],
             tasks: ['sass', 'cssmin'],
         }
     });
