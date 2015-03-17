@@ -22,7 +22,9 @@ gulp.task('styles-less', function () {
   return gulp.src('assets/css/*.less')
     .pipe(less())
     .pipe(autoprefixer())
+    .pipe(sourcemaps.init())
     .pipe(minify())
+    .pipe(sourcemaps.write())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('assets/css/'));
 });
