@@ -1,6 +1,6 @@
 {
   "name": "alstart",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "devDependencies": {
     "grunt": "latest",
     "gulp": "latest",
@@ -18,6 +18,7 @@
     "grunt-contrib-less": "latest",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-uglify": "latest",
-    "browser-sync": "latest"
+    "browser-sync": "latest",
+    "gulp-autoprefixer": "latest"
   }
 }

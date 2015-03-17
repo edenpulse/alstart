@@ -10,6 +10,7 @@ var minify = require('gulp-minify-css');
 var sourcemaps = require('gulp-sourcemaps');
 var rename = require('gulp-rename');
 var browserSync = require('browser-sync');
+var autoprefixer = require('gulp-autoprefixer');
 // var styledown = require('gulp-styledown');
 
 // Common tasks
@@ -20,6 +21,7 @@ gulp.task('doallthethings', ['styles','scripts']);
 gulp.task('styles-less', function () {
   return gulp.src('assets/css/*.less')
     .pipe(less())
+    .pipe(autoprefixer())
     .pipe(minify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('assets/css/'));
@@ -29,6 +31,7 @@ gulp.task('styles-less', function () {
 gulp.task('styles-sass', function () {
   gulp.src('./assets/css/*.scss')
     .pipe(sass())
+    .pipe(autoprefixer())
     .pipe(sourcemaps.init())
     .pipe(minify({keepBreaks:false,keepSpecialComments:0}))
     .pipe(sourcemaps.write())
