@@ -9,38 +9,38 @@ module.exports = function (grunt) {
         },
         dist: {
             files: {
-                './assets/css/styles.css': './assets/css/styles.scss'
+                './src/assets/css/styles.css': './dist/assets/css/styles.scss'
             }
           }
         },
         less: {
           files: {
-            './assets/css/styles.css': './assets/css/styles.less'
+            './src/assets/css/styles.css': './dist/assets/css/styles.less'
             }
           },
         cssmin: {
             minify: {
                 expand: true,
-                cwd: './assets/css/',
+                cwd: './src/assets/css/',
                 src: ['styles.css'],
-                dest: './assets/css/',
+                dest: './dist/assets/css/',
                 ext: '.min.css'
             }
         },
         concat: {
             jsfiles: {
-                src: './assets/js/*.js',
-                dest: './assets/js/prod.js'
+                src: './src/assets/js/*.js',
+                dest: './dist/assets/js/prod.js'
             }
         },
         uglify: {
             jsfiles: {
-                src: './assets/js/prod.js',
-                dest: './assets/js/prod.min.js'
+                src: './dist/assets/js/global.js',
+                dest: './dist/assets/js/global.min.js'
             }
         },
         watch: {
-            files: ['./assets/css/styles.scss'],
+            files: ['./src/assets/css/styles.scss'],
             tasks: ['sass', 'cssmin'],
         }
     });

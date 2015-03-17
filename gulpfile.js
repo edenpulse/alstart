@@ -19,40 +19,40 @@ gulp.task('doallthethings', ['styles','scripts']);
 
 // Styles LESS
 gulp.task('styles-less', function () {
-  return gulp.src('assets/css/*.less')
+  return gulp.src('./src/assets/css/*.less')
     .pipe(less())
     .pipe(autoprefixer())
     .pipe(sourcemaps.init())
     .pipe(minify())
     .pipe(sourcemaps.write())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('assets/css/'));
+    .pipe(gulp.dest('./dist/assets/css/'));
 });
 
 // Styles SASS
 gulp.task('styles-sass', function () {
-  gulp.src('./assets/css/*.scss')
+  gulp.src('./src/assets/css/*.scss')
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(sourcemaps.init())
     .pipe(minify({keepBreaks:false,keepSpecialComments:0}))
     .pipe(sourcemaps.write())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./assets/css/'));
+    .pipe(gulp.dest('./dist/assets/css/'));
 });
 
 // Scripts
 gulp.task('scripts',function() {
-  return gulp.src('assets/js/src/*.js')
+  return gulp.src('./src/assets/js/src/*.js')
     .pipe(uglify())
     .pipe(concat('global.min.js'))
-    .pipe(gulp.dest('assets/js/'));
+    .pipe(gulp.dest('./dist/assets/js/'));
 });
 
 /*
 // Styledown (styleguide)
 gulp.task('styleguide', function() {
-  gulp.src('assets/css/*.less')
+  gulp.src('./src/assets/css/*.less')
   .pipe(styledown({
     config: 'assets/css/config.md',
     filename: 'styleguide.html'
