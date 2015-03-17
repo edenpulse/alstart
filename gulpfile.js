@@ -45,7 +45,7 @@ gulp.task('styles-sass', function () {
 gulp.task('scripts',function() {
   return gulp.src('./src/assets/js/src/*.js')
     .pipe(uglify())
-    .pipe(concat('prod.min.js'))
+    .pipe(concat('global.min.js'))
     .pipe(gulp.dest('./dist/assets/js/'));
 });
 
