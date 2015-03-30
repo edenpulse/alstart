@@ -1,6 +1,6 @@
 {
   "name": "KNACSS",
-  "version": "4.0.3",
+  "version": "4.1.1",
   "homepage": "http://www.knacss.com/",
   "authors": [
     "Raphaël GOETTER, Alsacreations"
@@ -28,11 +28,11 @@
     "tests",
     "README.md"
   ],
-  "_release": "4.0.3",
+  "_release": "4.1.1",
   "_resolution": {
     "type": "version",
-    "tag": "4.0.3",
-    "commit": "ed680f91174ec812ee2ecd744eb7089f0c24aa46"
+    "tag": "4.1.1",
+    "commit": "ef1489b63e6ffc4fe2e9bf903e60d2ce027c1b4b"
   },
   "_source": "git://github.com/raphaelgoetter/KNACSS.git",
   "_target": "*",

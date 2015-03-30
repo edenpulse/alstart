@@ -17,7 +17,7 @@
 /* blocks that must contain floats */
 .clearfix,
 .line {
-	&:after {
+	&::after {
 		content: "";
 		display: table;
 		clear: both;
@@ -103,14 +103,15 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 */
 
 .flexbox,
+.flexbox-h,
 .flexbox-v {
 	display : flex;
 	flex-wrap: wrap;
-	flex-direction: column;
+	flex-direction: row;
 }
 
-.flexbox-h {
-	flex-direction: row;
+.flexbox-v {
+	flex-direction: column;
 }
 
 .flexitem-fluid {
@@ -127,4 +128,8 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 
 .flexitem-last {
 	order : 1;
+}
+
+.flexitem-center {
+	margin: auto;
 }

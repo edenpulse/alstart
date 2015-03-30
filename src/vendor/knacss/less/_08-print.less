@@ -38,15 +38,11 @@
 	}
 	
 	.print {
-		display: block; 
+		display: block;
 	}
 	
 	.no-print {
 		display: none;
-	}
-	
-	img {
-		filter: grayscale(100%);
 	}
 	
 	/* no orphans, no widows */
@@ -87,12 +83,12 @@
 	}
 	
 	/* displaying URLs */
-	a[href]:after {
+	a[href]::after {
 		content: " (" attr(href) ")";
 	}
 	
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
+	a[href^="javascript:"]::after,
+	a[href^="#"]::after {
 		content: "";
 	}
 }

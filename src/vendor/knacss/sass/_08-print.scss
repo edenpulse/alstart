@@ -44,10 +44,6 @@
 		display: none;
 	}
 	
-	img {
-		filter: grayscale(100%);
-	}
-	
 	/* no orphans, no widows */
 	p,
 	.p-like,
@@ -77,7 +73,7 @@
 	h3,
 	.h3-like,
 	caption {
-		page-break-after: avoid; 
+		page-break-after: avoid;
 	}
 	
 	a {
@@ -86,12 +82,12 @@
 	}
 	
 	/* displaying URLs */
-	a[href]:after {
+	a[href]::after {
 		content: " (" attr(href) ")";
 	}
 	
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
+	a[href^="javascript:"]::after,
+	a[href^="#"]::after {
 		content: "";
 	}
 }
