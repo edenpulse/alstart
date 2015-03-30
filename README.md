@@ -4,11 +4,9 @@ Choucroute, knacks, et picon bière
 ## Features :
 - HTML5 Boilerplate .htaccess file
 - Bower
-- Gruntfile for Sass / Less building - autoprefix - minify
 - Gulpfile for Sass / Less building - autoprefix - minify
 - Knacss
 - Basic Schnapsit index.html
-- Various Grunt options
 - Concat & Uglify Javascript files
 - SourceMaps generated for Sass & Less
 
@@ -18,11 +16,9 @@ Choucroute, knacks, et picon bière
 - run `npm install` or `npm update`
 - run `bower update`
 - run `gulp` / `gulp watch`
-OR
-- run `grunt` / `grunt watch`
 
 **If you want to use Less instead of default Sass version, just go
-in Gruntfile.js to uncomment lines**
+in gulpfile.js to uncomment lines**
 
 ## Crédits :
 
