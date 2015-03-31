@@ -66,9 +66,9 @@ gulp.task('watch', function() {
   browserSync({
     proxy: 'http://localhost:5000'
   });
-  gulp.watch(['./assets/css/*.scss'], ['styles-sass', browserSync.reload /*,'styleguide'*/ ]);
-  gulp.watch(['./assets/css/*.less'], ['styles-less', browserSync.reload /*,'styleguide'*/ ]);
-  gulp.watch(['./assets/js/src/*.js'], ['scripts']);
+  gulp.watch(['./src/assets/css/*.scss'], ['styles-sass', browserSync.reload /*,'styleguide'*/ ]);
+  gulp.watch(['./src/assets/css/*.less'], ['styles-less', browserSync.reload /*,'styleguide'*/ ]);
+  gulp.watch(['./src/assets/js/src/*.js'], ['scripts']);
 });
 
 gulp.task('default', ['doallthethings']);
