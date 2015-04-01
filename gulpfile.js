@@ -22,10 +22,10 @@ gulp.task('styles-less', function () {
   return gulp.src('./src/assets/css/*.less')
     .pipe(less())
     .pipe(autoprefixer())
-    .pipe(sourcemaps.init())
-    .pipe(minify())
-    .pipe(sourcemaps.write())
     .pipe(rename({suffix: '.min'}))
+    .pipe(sourcemaps.init())
+    .pipe(minify({keepBreaks:false,keepSpecialComments:0}))
+    .pipe(sourcemaps.write('.', {includeContent: false}))
     .pipe(gulp.dest('./dist/assets/css/'));
 });
 
@@ -34,10 +34,10 @@ gulp.task('styles-sass', function () {
   gulp.src('./src/assets/css/*.scss')
     .pipe(sass())
     .pipe(autoprefixer())
+    .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.init())
     .pipe(minify({keepBreaks:false,keepSpecialComments:0}))
-    .pipe(sourcemaps.write())
-    .pipe(rename({suffix: '.min'}))
+    .pipe(sourcemaps.write('.', {includeContent: false}))
     .pipe(gulp.dest('./dist/assets/css/'));
 });
 
