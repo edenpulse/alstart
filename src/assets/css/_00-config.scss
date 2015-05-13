@@ -1,5 +1,5 @@
 /*!
-* www.KNACSS.com V4.1.1 (2015-03-30) @author: Raphael Goetter, Alsacreations
+* www.KNACSS.com V4.2.0 (05 mai 2015) @author: Raphael Goetter, Alsacreations
 * Licence WTFPL http://www.wtfpl.net/
 */
 
@@ -55,3 +55,6 @@ $gutter:  1em; // gutter value for grid layouts. Unit can be: %, px, em, rem
 $number:  4; // number of equal columns
 $left:    2; // left side of uneven columns
 $right:   1; // right side of uneven columns
+
+//kna-namespace (default : null)
+$kna-namespace: null !default;

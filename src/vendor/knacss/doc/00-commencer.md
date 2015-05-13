@@ -20,6 +20,8 @@ Selon votre environnement de travail vous suffit de récupérer la feuille de st
 
 _Les versions LESS et Sass seront bien évidemment plus malléables grâce à l'apport de variables et fonctions._
 
+À noter que KNACSS est basé sur un socle [Normalize.css](http://necolas.github.io/normalize.css/), célèbre - et éprouvé - reset CSS employé par Twitter, Github, Bootstrap, Guardian, etc.
+
 ## Usage
 
 KNACSS n'est constitué que d'un seul fichier CSS (minifié ou non selon vos goûts), qu'il vous suffit d'ajouter à votre page HTML :
@@ -28,12 +30,23 @@ KNACSS n'est constitué que d'un seul fichier CSS (minifié ou non selon vos go�
 
 Il est également possible de l'installer (toutes versions) via [Bower](http://bower.io/) : ```bower install knacss```
 
+## Compatibilité
+
+KNACSS est - dans sa grande majorité - compatible avec l'ensemble des navigateurs à partir d'IE8 inclus.
+
+Seules exceptions :
+
+- les positionnements avancés à base de Flexbox (IE10+ minimum), c'est à dire toutes les classes débutant par `.flex-`
+- les grilles de mise en page, également basées sur flexbox  (IE10, Android 4.4+), c'est à dire toutes les classes débutant par `.grid-`
+
 ## RTFM!
 
 KNACSS se veut être un outil simple (contrairement aux usines à gaz que sont Bootstrap ou Foundation), mais évolutif.
 La contrepartie est que cela nécessite de votre part de bonnes connaissances en CSS et un petit effort de compréhension et de d'apprentissage des mécanismes de l'outil.
 
 Une [**documentation**](https://github.com/raphaelgoetter/KNACSS/tree/master/doc) détaillée et illustrée est en cours de rédaction. Je vous invite vivement à la parcourir avant de vous jeter sur KNACSS.
+
+Sachez qu'un [pense-bête en PDF](http://knacss.com/KNACSS-cheatsheet.pdf) est également disponible pour vous rappeler des classes utiles de KNACSS.
 
 
 ## Préprocesseurs
@@ -43,13 +56,13 @@ KNACSS est conçu et pensé pour être adapté aux préprocesseurs que sont LESS
 Si, comme nous, vous intégrez à l'aide de préprocesseurs, KNACSS va vous faciliter la vie dès le début du projet puisqu'un [fichier de configuration](https://github.com/raphaelgoetter/KNACSS/blob/master/less/_00-config.less) contenant toutes les variables du projet est intégré.
 Libre à vous de le modifier selon les contraintes de votre projet.
 
-**Attention**, si vous importez KNACSS automatiquement via Bower par exemple (dans un dossier `vendor`), ce fichier de configuration risque d'être écrasé à chaque mise à jour de KNACSS. Nous vous invitons à en faire une copie dans votre dossier de travail et à commenter l'appel au fichier de config de `vendor`.
+**Attention**, si vous importez KNACSS automatiquement via Bower (par exemple dans un dossier `vendor`), ce fichier de configuration risque d'être écrasé à chaque mise à jour de KNACSS. Nous vous invitons à en faire une copie dans votre dossier de travail et à commenter l'appel au fichier de config de `vendor`.
 
 Dans le cas d'un usage via préprocesseur, vos deux fichiers de travail principaux seront :
 - le fichier `less/_00-config.less` contenant toutes les variables du projet à définir une fois pour toute au départ
 - le fichier `less/knacss.less` qui importe tous les fichiers que vous risquez d'employez dans votre projet (`layout.css`, `responsive.css`, `forms.css`, `print.css`, etc.).
 
-En cours de développement, il vous suffit de compiler ce fichier `less/knacss.less` (ou `less/knacss.scss`) pour obtenir vos fichiers CSS utiles.
+En cours de développement, il vous suffit de compiler ce fichier `less/knacss.less` (ou `sass/knacss.scss`) pour obtenir vos fichiers CSS utiles.
 
 ### Préfixes navigateurs
 
@@ -58,6 +71,12 @@ Certaines fonctionnalités avancées de KNACSS nécessitent d'employer toute une
 Au sein de la version classique CSS de KNACSS, l'ensemble des préfixes est présent, **vous n'avez donc pas à vous en soucier** (Autoprefixer réglé à "last 2 versions").
 
 **Par contre, dans les versions LESS et Sass de KNACSS, les préfixes n'apparaissent pas** pour ne pas polluer la lecture du fichier de travail. **Il vous sera donc nécessaire de les ajouter**, de préférence automatiquement grâce à un plugin ou aux excellents outils que sont [autoprefixer](https://github.com/postcss/autoprefixer) ou [pleeease](http://pleeease.io/).
+
+### Utilisateur de SPIP ?
+
+Le CMS SPIP impose une classe générique `.fr` sur l'élément `<html>`, or cette classe est également employée pour les positionnements flottants dans KNACSS.
+
+Si vous êtes un utilisateur de SPIP, nous vous conseillons de modifier les fichiers CSS de KNACSS et de remplacer les classes `.fr` et `.fl` par `:not(html) .fr` et `:not(html) .fl`
 
 ## Liens utiles
 

@@ -7,7 +7,7 @@
 */
 
 /* buttons */
-.btn {
+.@{kna-namespace}btn {
 	display: inline-block;
 }
 
@@ -21,10 +21,18 @@ input,
 button,
 select,
 label,
-.btn {
+.@{kna-namespace}btn {
 	vertical-align: middle;
 	font-family: inherit;
 	font-size: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: @base-color;
 }
 
 label {
@@ -66,8 +74,8 @@ textarea:-moz-placeholder {
 	color: #777;
 }
 
-.btn:focus,
-input:focus,
+.@{kna-namespace}btn:focus,
+input[type="button"]:focus,
 button:focus {
 	outline: 0;
 	-webkit-tap-highlight-color: transparent;
@@ -75,5 +83,28 @@ button:focus {
 	   -moz-user-select: none;
 	    -ms-user-select: none;
 	        user-select: none;
-	background-image: none;
+}
+
+/* unstyled forms */
+.@{kna-namespace}unstyled {
+	button&,
+	input[type="button"]&,
+	input[type="submit"]&,
+	input[type="reset"]& {
+		padding: 0;
+		border: none;
+		line-height: 1;
+		text-align: left;
+		background: none;
+		border-radius: 0;
+		box-shadow: none;
+		-webkit-appearance: none;
+		   -moz-appearance: none;
+		        appearance: none;
+
+		&:focus {
+			box-shadow: none;
+			outline: none;
+		}
+	}
 }

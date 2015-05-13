@@ -1,6 +1,6 @@
 {
     "name": "knacss",
-    "version": "4.1.1",
+    "version": "4.2.0",
     "homepage": "http://www.knacss.com/",
     "bugs": "https://github.com/raphaelgoetter/KNACSS/issues",
     "author": [
@@ -20,5 +20,14 @@
     },
     "license": "WTFPL",
     "dependencies": {},
+    "devDependencies": {
+        "gulp": "latest",
+        "gulp-rename": "latest",
+        "gulp-less": "latest",
+        "gulp-concat": "latest",
+        "gulp-minify-css": "latest",
+        "gulp-autoprefixer": "latest",
+        "gulp-sourcemaps": "latest"
+    },
     "engines": {}
 }
