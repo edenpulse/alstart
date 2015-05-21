@@ -19,7 +19,7 @@ gulp.task('doallthethings', ['styles','scripts']);
 
 // Styles LESS
 gulp.task('styles-less', function () {
-  return gulp.src('./src/assets/css/*.less')
+  return gulp.src('./src/assets/css/styles.less')
     .pipe(less())
     .pipe(autoprefixer())
     .pipe(rename({suffix: '.min'}))
@@ -31,7 +31,7 @@ gulp.task('styles-less', function () {
 
 // Styles SASS
 gulp.task('styles-sass', function () {
-  gulp.src('./src/assets/css/*.scss')
+  gulp.src('./src/assets/css/styles.scss')
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(rename({suffix: '.min'}))
